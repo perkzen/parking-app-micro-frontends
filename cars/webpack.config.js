@@ -4,7 +4,7 @@ const Dotenv = require('dotenv-webpack');
 const deps = require("./package.json").dependencies;
 module.exports = (_, argv) => ({
     output: {
-        publicPath: "http://localhost:3001/",
+        publicPath: "http://localhost:3003/",
     },
 
     resolve: {
@@ -12,7 +12,7 @@ module.exports = (_, argv) => ({
     },
 
     devServer: {
-        port: 3001,
+        port: 3003,
         historyApiFallback: true,
     },
 
@@ -41,13 +41,12 @@ module.exports = (_, argv) => ({
 
     plugins: [
         new ModuleFederationPlugin({
-            name: "payments",
+            name: "cars",
             filename: "remoteEntry.js",
             remotes: {},
             exposes: {
-                "./PaymentsList": "./src/PaymentsList.tsx",
-                "./PaymentDetails": "./src/PaymentDetails.tsx",
-                "./CreatePaymentForm": "./src/CreatePaymentForm.tsx"
+                "./AddCarForm": "./src/AddCarForm.tsx",
+                "./CarsList": "./src/CarsList.tsx",
             },
             shared: {
                 ...deps,

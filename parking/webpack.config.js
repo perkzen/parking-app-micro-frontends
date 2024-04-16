@@ -47,6 +47,7 @@ module.exports = (_, argv) => ({
             exposes: {
                 "./ParkingSpots": "./src/ParkingSpots.tsx",
                 "./CreateParkingSpot": "./src/CreateParkingSpot.tsx",
+                "./ParkingSpotDetails": "./src/ParkingSpotDetails.tsx",
             },
             shared: {
                 ...deps,

@@ -33,7 +33,13 @@ const ParkingSpots = () => {
     return (
         <div>
             <h1>Parking spots</h1>
-            <div>{JSON.stringify(parkingSpots)}</div>
+            <div>
+                {parkingSpots.length > 0 && parkingSpots.map(parkingSpot => (
+                    <div key={parkingSpot.name} className="bg-gray-100 p-4 my-4 rounded shadow">
+                        <p className="text-gray-800 font-bold">Name: {parkingSpot.name}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

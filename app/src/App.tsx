@@ -4,16 +4,24 @@ import PaymentDetails from "payments/PaymentDetails";
 import PaymentsList from "payments/PaymentsList";
 import CreateParkingSpot from "parking/CreateParkingSpot";
 import ParkingSpots from "parking/ParkingSpots";
+import ParkingSpotDetails from "parking/ParkingSpotDetails";
+import CreatePaymentForm from "payments/CreatePaymentForm";
+import AddCarForm from "cars/AddCarForm";
+import CarsList from "cars/CarsList";
 
 import './index.scss'
 
 const App = () => (
     <div className="mt-10 text-3xl mx-auto max-w-6xl">
-      <div className={"text-red-500"}>Name: app</div>
-      <PaymentsList/>
-      <PaymentDetails/>
-      <ParkingSpots/>
-      <CreateParkingSpot/>
+        <div className={"text-red-500"}>Name: app</div>
+        <PaymentsList/>
+        <CreatePaymentForm/>
+        <PaymentDetails/>
+        <ParkingSpots/>
+        <CreateParkingSpot/>
+        <ParkingSpotDetails/>
+        <CarsList/>
+        <AddCarForm/>
     </div>
 )
 const rootElement = document.getElementById('app')
