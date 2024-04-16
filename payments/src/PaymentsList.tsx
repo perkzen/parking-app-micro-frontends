@@ -30,11 +30,11 @@ const PaymentsList = () => {
     }, []);
 
     return (
-        <div className="container mx-auto bg-red-500">
+        <div className="container mx-auto">
             <h1 className="text-2xl font-bold mb-4">Payments List</h1>
             <div className="grid grid-cols-1 gap-4">
                 {payments.length > 0 && payments.map(payment => (
-                    <div key={payment.id} className="bg-gray-100 p-4 rounded shadow">
+                    <div key={payment.id} className="bg-gray-100 p-4 my-4 rounded shadow">
                         <p className="text-gray-800 font-bold">Payment ID: {payment.id}</p>
                     </div>
                 ))}
